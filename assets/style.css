@@ -49,6 +49,7 @@ body{
 }
 
 .conteiner-home{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,9 +106,11 @@ body{
     padding-left: 10%;
 }
 
+.my-projects{
+    width: 100%;
+}
+
 .project{
-    width: 600px;
-    height: 300px;
     border: 2px solid var(--color2);
     border-radius: 15px;
     position: relative;
@@ -124,7 +127,8 @@ body{
     margin-top: 80px;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(1, auto);
+    grid-template-columns: repeat(1, 600px);
+    grid-template-rows: repeat(3, 300px);
     gap: 80px;
 }
 
@@ -197,6 +201,15 @@ body{
 
 @media screen and (max-width: 415px){
 
+    body{
+        width: 100%;
+    }
+
+    .my-projects{
+        display: flex;
+        justify-content: center;
+    }
+
     .title{
         font-size: 1.2rem;
     }
@@ -208,42 +221,12 @@ body{
     }
     
     .projects{
-        margin-top: 50px;
-        height: 100vh;
+        margin-top: 80px;
         display: grid;
-        justify-content: center;
-        grid-template-columns: repeat(1, auto);
-        grid-template-rows: repeat(3, 175px);
-        gap: 50px;
-    }
-
-    .project{
-        width: 325px;
-        height: 175px;
-        border: 2px solid var(--color2);
-        border-radius: 15px;
-        position: relative;
+        grid-template-columns: repeat(1, 300px);
+        grid-template-rows: repeat(3, 150px);
         overflow: hidden;
-    }
-    
-    .project > img{
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-    }
-    
-    .text-project{
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        background-color: var(--color2);
-        bottom: -3px;
-        left: 0;
-        width: 100%;
-        padding-right: 1px;
-        height: 25%;
-        border-radius: 15px 15px 0px 0px;
-        color: #fff;
-        transition: .3s ease-in-out;
+        gap: 80px;
+        height: 300vh;
     }
 }
