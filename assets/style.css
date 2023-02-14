@@ -34,6 +34,7 @@
     --font-bold: Argentum-Bold;
 
     --color1: #171A21;
+    --color2: #F75C03;
 }
 
 *{
@@ -43,7 +44,7 @@
 
 body{
     background-color: var(--color1);
-    color: #fff;
+    color: var(--color2);
     font-family: var(--font-default);
 }
 
@@ -84,16 +85,100 @@ body{
 
 [data-anime]{
     opacity: 0;
-    transition: .3s;
+    transition: .5s;
   }
   
-[data-anime ='left'] {
-    transform: translate3d(-50px , 0 , 0);
+[data-anime = 'left'] {
+    transform: translate3d(-150px , 0 , 0);
 }
+
+[data-anime = 'right'] {
+    transform: translate3d(150px , 0 , 0);
+}
+
 [data-anime].animation{
     opacity: 1;
     transform: translate3d(0px,0px, 0px);
 }
+
+.title-projects > h2{
+    padding-left: 10%;
+}
+
+.project{
+    width: 600px;
+    height: 300px;
+    border: 2px solid var(--color2);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.projects{
+    margin-top: 80px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1, auto);
+    gap: 80px;
+}
+
+.text-project{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color2);
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    padding-right: 1px;
+    height: 25%;
+    border-radius: 15px 15px 0px 0px;
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+
+.text-project h3{
+    padding: 10px 0px 0px 15px;
+    font-size: 1.2rem;
+    font-family: var(--font-bold);
+}
+
+.project:hover .text-project{
+    height: 35%;
+}
+
+.project:hover .text-project a{
+    opacity: 1;
+}
+
+.text-project a{
+    position: relative;
+    margin-top: 5px;
+    opacity: 0;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    display: block;
+    color: #F6F4F3;
+}
+
+.text-project a:hover{
+    color: #F6F4F3cc;
+}
+
+.project-links{
+    align-self: flex-end; 
+    margin-bottom: 10px;
+    margin-right: 25px;
+}
+
+
+
 
 @media screen and (min-width: 1024px){
 
@@ -115,5 +200,49 @@ body{
     .title{
         font-size: 1.2rem;
     }
+
+    .text-project h3{
+        padding: 10px 0px 0px 15px;
+        font-size: 1rem;
+        font-family: var(--font-bold);
+    }
     
+    .projects{
+        margin-top: 50px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(3, 175px);
+        gap: 50px;
+    }
+
+    .project{
+        width: 325px;
+        height: 175px;
+        border: 2px solid var(--color2);
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .project > img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    
+    .text-project{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--color2);
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        padding-right: 1px;
+        height: 25%;
+        border-radius: 15px 15px 0px 0px;
+        color: #fff;
+        transition: .3s ease-in-out;
+    }
 }
