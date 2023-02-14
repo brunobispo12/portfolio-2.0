@@ -218,8 +218,8 @@ body{
     .projects{
         margin-top: 80px;
         display: grid;
-        grid-template-columns: repeat(1, 300px);
-        grid-template-rows: repeat(3, 150px);
+        grid-template-columns: repeat(1, 340px);
+        grid-template-rows: repeat(3, 190px);
         overflow: hidden;
         gap: 80px;
         height: 300vh;
