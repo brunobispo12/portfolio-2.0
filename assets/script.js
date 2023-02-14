@@ -18,7 +18,7 @@ const target = document.querySelectorAll("[data-anime]")
 const animationClass = 'animation'
 
 function animationScroll(){
-    let windowTop = window.pageYOffset + ((window.innerHeight *3)/4)
+    let windowTop = window.pageYOffset + ((window.innerHeight * 3)/4)
     target.forEach(function(el){
         if((windowTop) > el.offsetTop){
             el.classList.add(animationClass)
