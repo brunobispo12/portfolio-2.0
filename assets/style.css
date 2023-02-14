@@ -205,11 +205,6 @@ body{
         width: 100%;
     }
 
-    .my-projects{
-        display: flex;
-        justify-content: center;
-    }
-
     .title{
         font-size: 1.2rem;
     }
