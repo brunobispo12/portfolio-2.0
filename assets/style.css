@@ -108,6 +108,7 @@ body{
 
 .my-projects{
     width: 100%;
+    height: fit-content;
 }
 
 .project{
@@ -127,8 +128,8 @@ body{
     margin-top: 80px;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(1, 600px);
-    grid-template-rows: repeat(3, 300px);
+    grid-template-columns: repeat(1, 700px);
+    grid-template-rows: repeat(3, 350px);
     gap: 80px;
 }
 
@@ -181,8 +182,33 @@ body{
     margin-right: 25px;
 }
 
+.footer{
+    background-color: var(--color2);
+    margin-top: 10%;
+    height: 125px;
+    color: #F6F4F3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.contacts{
+    margin-left: 5%;
+}
 
+nav{
+    margin-right: 5%;
+}
+
+nav a{
+    text-decoration: none;
+    color: #F6F4F3;
+    font-size: 1.2rem;
+}
+
+nav a:hover{
+    color: #F6F4F3cc;
+}
 
 @media screen and (min-width: 1024px){
 
@@ -224,5 +250,18 @@ body{
         overflow: hidden;
         gap: 80px;
         height: fit-content;
+    }
+
+    .footer{
+        background-color: var(--color2);
+        margin-top: 10%;
+        height: 125px;
+        color: #F6F4F3;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav{
+        margin: auto;
     }
 }
