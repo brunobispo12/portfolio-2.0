@@ -209,6 +209,7 @@ body{
     
     .projects{
         margin-top: 50px;
+        height: 100vh;
         display: grid;
         justify-content: center;
         grid-template-columns: repeat(1, auto);
