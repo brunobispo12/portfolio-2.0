@@ -1,0 +1,119 @@
+@font-face {
+    font-family: Argentum-Regular;
+    src: url(../fonts/ArgentumSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Argentum-Bold;
+    src: url(../fonts/ArgentumSans-Bold.ttf);
+}
+
+@keyframes arrowUpDown {
+    0%{
+        bottom: 8%;
+    }
+    50%{
+        bottom: 13%;
+    }
+    100%{
+        bottom: 8%;
+    }
+}
+
+@keyframes FadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+:root{
+    --font-default: Argentum-Regular;
+    --font-bold: Argentum-Bold;
+
+    --color1: #171A21;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--color1);
+    color: #fff;
+    font-family: var(--font-default);
+}
+
+.conteiner-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    animation-name: FadeIn;
+    animation: 2s ease-in-out 0s 1 FadeIn;
+}
+
+.title{
+    font-family: var(--font-bold);
+}
+
+.title-projects{
+    font-family: var(--font-bold);
+}
+
+.description{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.arrow{
+    position: absolute;
+    bottom: 10%;
+    animation: 2s ease-in-out 0s infinite arrowUpDown;
+}
+
+.my-projects{
+    margin-top: 5%;
+    height: 400px;
+}
+
+[data-anime]{
+    opacity: 0;
+    transition: .3s;
+  }
+  
+[data-anime ='left'] {
+    transform: translate3d(-50px , 0 , 0);
+}
+[data-anime].animation{
+    opacity: 1;
+    transform: translate3d(0px,0px, 0px);
+}
+
+@media screen and (min-width: 1024px){
+
+    .title{
+        font-size: 1.8rem;
+    }
+
+    .title-projects{
+        font-size: 1.3rem;
+    }
+    
+    .description{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 415px){
+
+    .title{
+        font-size: 1.2rem;
+    }
+    
+}
