@@ -244,7 +244,7 @@ nav a:hover{
     .projects{
         margin-top: 70px;
         display: grid;
-        padding: 10px;
+        padding: 20px;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 250px);
         overflow: hidden;
@@ -254,7 +254,7 @@ nav a:hover{
 
     .footer{
         background-color: var(--color2);
-        margin-top: 10%;
+        margin-top: 15%;
         height: 125px;
         color: #F6F4F3;
         display: flex;
