@@ -270,7 +270,7 @@ nav a:hover{
     }
 }
 
-@media screen and (max-width: 415px){
+@media screen and (max-width: 430px){
 
     body{
         width: 100%;
@@ -283,7 +283,12 @@ nav a:hover{
     .text-project h3{
         padding: 10px 0px 0px 15px;
         font-size: 1rem;
+        width: 100%;
         font-family: var(--font-bold);
+    }
+
+    .text-project a{
+        width: 120%;
     }
     
     .projects{
