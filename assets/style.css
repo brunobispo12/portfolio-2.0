@@ -130,7 +130,7 @@ body{
     padding: 20px;
     justify-content: center;
     grid-template-columns: repeat(1, minmax(400px ,700px));
-    grid-template-rows: repeat(3, 350px);
+    grid-template-rows: repeat(5, 350px);
     gap: 80px;
     overflow: hidden;
 }
